@@ -1059,17 +1059,23 @@ to find previous occurence press N
 
 ## What does the /etc/hosts file contain?
 
+<!-- notecardId: 1758873072759 -->
+
 hostname-to-IP mappings for that system
 the system does not verify whether the system's actual hostname 
 matches the alias you defined
 
 ## What is the default priority between /etc/hosts and dns?
 
+<!-- notecardId: 1758873072762 -->
+
 /etc/hosts takes precedence over dns by default
 this can be changed in /etc/nsswitch.conf with config bellow
     hosts:     dns files
 
 ## What doest the /etc/resolv.conf file contain?
+
+<!-- notecardId: 1758873072765 -->
 
 dns ip, ex:
 ```console
@@ -1083,6 +1089,8 @@ search mycompany.com
 when using a short hostname (web), the system will sequentially append each search domain until a valid match is found (web.mycompany.com)
 
 ## What are the most common DNS record types?
+
+<!-- notecardId: 1758873072768 -->
 
 A       map hostnames to IPv4 addresses
 ```console
@@ -1100,6 +1108,8 @@ food.web-server  eat.web-server,hungry.web-server
 
 ## What command can you use to query your dns server?
 
+<!-- notecardId: 1758873072770 -->
+
 ```console
 cip@DESKTOP-KJIIPF2:~$ nslookup www.google.com
 ;; Got recursion not available from 172.26.144.1
@@ -1115,6 +1125,8 @@ Address: 2a00:1450:4001:80e::2004
 ```
 
 ## What other command besides nslookup can be used for dns query?
+
+<!-- notecardId: 1758873072773 -->
 
 ```console
 cip@DESKTOP-KJIIPF2:~$ dig www.google.com
@@ -1137,3 +1149,285 @@ www.google.com.         0       IN      A       142.250.185.68
 ;; WHEN: Fri Sep 26 10:24:46 EEST 2025
 ;; MSG SIZE  rcvd: 62
 ```
+
+## How do you inspect a host's interfaces?
+
+<!-- notecardId: 1758873072775 -->
+
+```console
+cip@DESKTOP-KJIIPF2:~$ ip link
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group 
+default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:15:5d:12:18:e6 brd ff:ff:ff:ff:ff:ff
+```
+
+## How do you view or assign ip adresses to interfaces?
+
+<!-- notecardId: 1758890591091 -->
+
+view
+```console
+cip@DESKTOP-KJIIPF2:~$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 
+1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:15:5d:12:18:e6 brd ff:ff:ff:ff:ff:ff
+    inet 172.26.149.45/20 brd 172.26.159.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::215:5dff:fe12:18e6/64 scope link
+       valid_lft forever preferred_lft forever
+```
+
+assign
+```bash
+ip addr add 192.168.1.10/24 dev eth0
+```
+
+## How do you view the kernel's routing table?
+
+<!-- notecardId: 1758890591094 -->
+
+```console
+cip@DESKTOP-KJIIPF2:~$ route
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+default         DESKTOP-KJIIPF2 0.0.0.0         UG    0      0        0 eth0 
+172.26.144.0    0.0.0.0         255.255.240.0   U     0      0        0 eth0 
+```
+
+## How do you configure a default gateway (192.168.2.1)?
+
+<!-- notecardId: 1758890591098 -->
+
+```bash
+ip route add default via 192.168.2.1
+```
+
+## How do you configure a specific route for network 192.168.1.0 using gateway 192.168.2.1?
+
+<!-- notecardId: 1758890591101 -->
+
+```bash
+ip route add 192.168.1.0/24 via 192.168.2.1
+```
+
+## What can be used interchangeably with the word default in most networking commands?
+
+<!-- notecardId: 1758890591103 -->
+
+0.0.0.0
+
+## How do you change the state of network interface eth0 to up?
+
+<!-- notecardId: 1758890591106 -->
+
+```bash 
+sudo ifconfig eth0 up
+```
+
+## Where is the file containing information about a user account?
+
+<!-- notecardId: 1758890591108 -->
+
+```console
+/etc/passwd
+```
+
+## Where is the file containing information about user groups?
+
+<!-- notecardId: 1758890591110 -->
+
+```console
+/etc/group
+```
+
+## What command can provide user details?
+
+<!-- notecardId: 1758890591113 -->
+
+```console
+cip@DESKTOP-KJIIPF2:~$ id cip
+uid=1000(cip) gid=1000(cip) groups=1000(cip),4(adm),20(dialout),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),100(users),107(netdev)
+```
+
+## How do can you see what accounts are logged in on the machine?
+
+<!-- notecardId: 1758890591115 -->
+
+```console
+cip@DESKTOP-KJIIPF2:~$ who
+cip      pts/1        2025-09-26 10:48
+```
+
+## How can you see a history of who logged in on the machine?
+
+<!-- notecardId: 1758890591118 -->
+
+```cip@DESKTOP-KJIIPF2:~$ last
+reboot   system boot  5.15.133.1-micro Fri Sep 26 10:48   still running
+reboot   system boot  5.15.133.1-micro Fri Sep 26 09:05   still running
+```
+
+## How can you switch from one user to another?
+
+<!-- notecardId: 1758890591120 -->
+
+```bash
+su username
+```
+
+## Where is the file containing users with sudo rights?
+
+<!-- notecardId: 1758890591122 -->
+
+```console
+/etc/sudoers
+```
+
+## How can you set a nologin shell for the root user?
+
+<!-- notecardId: 1758890591125 -->
+
+go to 
+```console
+/etc/passwd
+```
+add 
+```console
+/root:x:0:0:root:/root:/usr/sbin/nologin
+```
+instead of 
+```console
+root:x:0:0:root:/root:/bin/bash
+```
+
+## Given the following row from a sudoers file "%dev ALL=(ALL:ALL) All" explain the first ALL.
+
+<!-- notecardId: 1758890591127 -->
+
+it represents the list of hosts the user can run a list of commands on
+in a normal setup there is just one host the localhost
+
+## Given the following row from a sudoers file "%dev ALL=(ALL:ALL) All" explain the part (ALL:ALL).
+
+<!-- notecardId: 1758890591130 -->
+
+it represents the users and groups the user can run commands as
+
+## Given the following row from a sudoers file "%dev ALL=(ALL:ALL) All" explain the last ALL.
+
+<!-- notecardId: 1758890591132 -->
+
+it represents the list of commands the user can run
+
+## In what file are the user passwords stored in?
+
+<!-- notecardId: 1758890591135 -->
+
+```console
+/etc/shadow
+```
+
+## How can you create a new user?
+
+<!-- notecardId: 1758890591137 -->
+
+```bash
+useradd bob
+```
+
+## How can you set a password for a user?
+
+<!-- notecardId: 1758890591139 -->
+
+```bash 
+passwd bob
+```
+
+## How can you change password for the current user?
+
+<!-- notecardId: 1758890591142 -->
+
+```bash
+passwd
+```
+
+## How can you check the current username?
+
+<!-- notecardId: 1758890591144 -->
+
+```bash
+whoami
+```
+
+## How can you create a new user and specify a uid?
+
+<!-- notecardId: 1758890591147 -->
+
+```bash
+useradd -u 1009 bob
+```
+
+## How can you create a new user and specify a guid?
+
+<!-- notecardId: 1758890591149 -->
+
+```bash
+useradd -g 1009 bob
+```
+
+## How can you create a new user and specify a custom home dir?
+
+<!-- notecardId: 1758890591151 -->
+
+```bash
+useradd -d /home/some/project bob
+```
+
+## How can you create a new user and specify a custom login shell?
+
+<!-- notecardId: 1758890591154 -->
+
+```bash
+useradd -s /bin/bash bob
+```
+
+## How can you create a new user and specify a custom comment?
+
+<!-- notecardId: 1758890591157 -->
+
+```bash
+useradd -c "nice guy" bob
+```
+
+## How do you delete a user?
+
+<!-- notecardId: 1758890591159 -->
+
+```bash
+userdel bob
+```
+
+## How do you add a new group with custom gid?
+
+<!-- notecardId: 1758890591161 -->
+
+```bash 
+groupadd -g 1011 dev
+```
+
+## How do you delete a group?
+
+<!-- notecardId: 1758890591164 -->
+
+```bash 
+groupdel dev
+```
+
