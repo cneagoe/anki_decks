@@ -1,0 +1,2 @@
+vscode plugin -> anki   
+https://marketplace.visualstudio.com/items?itemName=jasew.anki
