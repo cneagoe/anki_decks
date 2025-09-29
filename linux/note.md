@@ -1431,3 +1431,326 @@ groupadd -g 1011 dev
 groupdel dev
 ```
 
+## What is the octal value of the execute permission?
+
+<!-- notecardId: 1759148483362 -->
+
+1
+
+## What is the octal value of the write permission?
+
+<!-- notecardId: 1759148483365 -->
+
+2
+
+## What is the octal value of the read permission?
+
+<!-- notecardId: 1759148483368 -->
+
+4
+
+## What is the order in which file permissions are listed?
+
+<!-- notecardId: 1759148483370 -->
+
+user group others
+
+## If the user is the owner of the file which permissions apply?
+
+<!-- notecardId: 1759148483372 -->
+
+only the user ones
+
+## If the user is not the owner but is in the same group as the owner which permissions apply?
+
+<!-- notecardId: 1759148483375 -->
+
+only the group ones
+
+## If the user is not the owner or in the same group as the owner which permissions apply?
+
+<!-- notecardId: 1759148483377 -->
+
+only the others 
+
+## How do you change the permissions on a file?
+
+<!-- notecardId: 1759148483380 -->
+
+```bash
+chmod 777 file
+```
+
+## How do you change the ownership of a file?
+
+<!-- notecardId: 1759148483382 -->
+
+```bash
+chown user:group some_file
+```
+
+## How do you copy an ssh key to a remote server?
+
+<!-- notecardId: 1759148483384 -->
+
+```bash
+ssh-copy-id user@hostname
+```
+
+## What file contains the public keys that can login to the server?
+
+<!-- notecardId: 1759148483387 -->
+
+```console
+/home/some_user/.ssh/authorized_keys
+```
+
+## What command can you use to coppy files over ssh?
+
+<!-- notecardId: 1759148483389 -->
+
+```bash
+scp some/local/path/file hostname:/some/remote/path
+```
+
+## What flags are used by scp to coppy a folder and preserve permissions?
+
+<!-- notecardId: 1759148483391 -->
+
+```bash 
+scp -pr some/local/path/file hostname:/some/remote/path
+```
+
+-p preserve permissions
+-r recursive (for directory)
+
+## How do you see all ip rules in iptables?
+
+<!-- notecardId: 1759148483393 -->
+
+```console
+cip@DESKTOP-KJIIPF2:~$ sudo iptables -L
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination
+```
+
+## Add an incomming rule that permits SSH connections solely from 172.16.238.187 in iptables.
+
+<!-- notecardId: 1759148483396 -->
+
+```bash
+iptables -A INPUT -p tcp -s 172.16.238.187 --dport 22 -j ACCEPT
+```
+
+## Add a rule that drops all incomming connections with iptables.
+
+<!-- notecardId: 1759148483398 -->
+
+```bash
+iptables -A INPUT -j DROP
+```
+
+## Add an outgoing rule that permits SSH connections to google.com in iptables at the top of the output chain.
+
+<!-- notecardId: 1759148483400 -->
+
+```bash
+iptables -I OUTPUT 1 -p tcp -d google.com --dport 22 -j ACCEPT
+```
+
+## What command can you use to schedule a job to run at a certain time?
+
+<!-- notecardId: 1759148483402 -->
+
+```bash
+crontab -e
+```
+
+## Schedule a job to run at 08:10 AM 19 FEB any weekday.
+
+<!-- notecardId: 1759148483406 -->
+
+```console
+10 8 19 2 * job.sh
+```
+
+## Schedule a job to run every minute.
+
+<!-- notecardId: 1759148483408 -->
+
+```console
+* * * * *
+```
+
+## Schedule a job to run every other day (one on one off).
+
+<!-- notecardId: 1759148483410 -->
+
+```console
+* * */2 * *
+```
+
+## How do you list all jobs scheduled in cron?
+
+<!-- notecardId: 1759148483412 -->
+
+```bash
+cron -l
+```
+
+## Define a basic service unit file named project-mercury.service the unit file only needs to execute the script /usr/bin/project-mercury.sh in the background using /bin/bash.
+
+<!-- notecardId: 1759153885053 -->
+
+create file in /etc/systemd/system containing :
+```console
+[Service]
+ExecStart=/bin/bash /usr/bin/project-mercury.sh
+```
+
+## How do you start a service with systemd?
+
+<!-- notecardId: 1759153885056 -->
+
+```bash
+sudo systemctl start project-mercury.service
+```
+
+## How do you check a service is active with systemd?
+
+<!-- notecardId: 1759153885058 -->
+
+```bash 
+sudo systemctl status project-mercury.service
+```
+
+## How do you stop a service with systemd?
+
+<!-- notecardId: 1759153885061 -->
+
+```bash
+sudo systemctl stop project-mercury.service
+```
+
+## How do you automate the start of a service during boot with systemd?
+
+<!-- notecardId: 1759153885063 -->
+
+add this section to your .service file in /etc/systemd/system
+```console
+[Install]
+WantedBy=graphical.target
+```
+
+## How do you ensure the service starts under a particular user with systemd?
+
+<!-- notecardId: 1759153885065 -->
+
+the .service file should contain the following user setting :
+```console
+[Service]
+ExecStart=/bin/bash /usr/bin/project-mercury.sh
+User=project_mercury
+```
+
+## How do you configure the service to restart automatically if it fails with systemd?
+
+<!-- notecardId: 1759153885067 -->
+
+the .service file should contain the following restart settings:
+```console
+[Service]
+ExecStart=/bin/bash /usr/bin/project-mercury.sh
+Restart=on-failure
+RestartSec=10
+```
+
+## How do you define a dependency on another service with systemd?
+
+<!-- notecardId: 1759153885070 -->
+
+the .service file should contain the following section before the Service section:
+```console
+[Unit]
+After=postgresql.service
+```
+
+## How do you ensure all changes to a .service file are applied in systemd?
+
+<!-- notecardId: 1759153885072 -->
+
+```bash 
+sudo systemctl daemon-reload
+```
+
+## How do you stop and start a service in one command with systemctl?
+
+<!-- notecardId: 1759153885074 -->
+
+```bash
+systemctl restart docker
+```
+
+## How do you read the config files for a service while it's still running without restarting with systemctl?
+
+<!-- notecardId: 1759153885077 -->
+
+```bash
+systemctl reload docker
+```
+
+## What command can you use to ensure a service starts at boot every time with systemctl?
+
+<!-- notecardId: 1759153885079 -->
+
+```bash
+systemctl enable docker
+```
+
+## What command can you use to ensure a service doesn't start at boot every time with systemctl?
+
+<!-- notecardId: 1759153885081 -->
+
+```bash
+systemctl disable docker
+```
+
+## What are the three main states of a service in systemd?
+
+<!-- notecardId: 1759153885083 -->
+
+Active Innactive Failed
+
+## How do you trigger the edit of service config file with systemctl?
+
+<!-- notecardId: 1759153885086 -->
+
+```bash
+systemctl edit project-mercury.service --full
+```
+--full will provide the entire config file for editing
+
+## How do you list all units currently managed by systemctl?
+
+<!-- notecardId: 1759153885088 -->
+
+```bash
+systemctl list-units --all
+```
+
+## How do you see the log of systemctl?
+
+<!-- notecardId: 1759153885091 -->
+
+```bash
+journalctl
+```
+-b      see logs from current boot
+-u UNIT see logs for a particular unit
+
