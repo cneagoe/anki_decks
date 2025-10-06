@@ -1754,3 +1754,108 @@ journalctl
 -b      see logs from current boot
 -u UNIT see logs for a particular unit
 
+## When listing files in /dev/, what does the first letter b of the output stand for?
+
+<!-- notecardId: 1759749242289 -->
+
+block device
+
+## What can be created from a disk?
+
+<!-- notecardId: 1759749242292 -->
+
+partitions
+
+## What built in tool can be used to CRUD partitions?
+
+<!-- notecardId: 1759749242295 -->
+
+```console
+cip@DESKTOP-KJIIPF2:~$ sudo fdisk -l /dev/sdc
+Disk /dev/sdc: 1 TiB, 1099511627776 bytes, 2147483648 sectors
+Disk model: Virtual Disk    
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+```
+
+## What are the partition types?
+
+<!-- notecardId: 1759749242298 -->
+
+primary
+    can be used to boot (used to be max 4)
+extended
+    can't be used on it's own
+    can host logical partitions
+logical
+
+## What are the partition schemes?
+
+<!-- notecardId: 1759749242301 -->
+
+MBR (master boot recort)
+    max 4 primary partitions per disk (max size 2TB)
+GPT (GUID partition table)
+    max 128 partitions (limited by RHEL)
+
+## What easy to use tool can be used to CRUD partitions?
+
+<!-- notecardId: 1759749242303 -->
+
+```bash
+gdisk
+```
+
+## What needs to be in place on a disk so that rhel can write data to it?
+
+<!-- notecardId: 1759749242306 -->
+
+partition
+filesystem
+
+## What is the main difference between ext2 and ext3 filesystems?
+
+<!-- notecardId: 1759749242309 -->
+
+ext2 takes a lot longer to recover after a failure
+
+## Create and mount a new ext4 filesystem on sdb1.
+
+<!-- notecardId: 1759749242312 -->
+
+```bash
+mkfs.ext4 /dev/sdb1
+mkdir /mnt/ext4
+mount /dev/sdb1 mnt/ext4
+```
+
+## How can you tell what filesystem is mounted on sdb1?
+
+<!-- notecardId: 1759749242315 -->
+
+```bash
+mount | grep /dev/sdb1
+df -hP | grep /dev/sdb1
+```
+
+## How do you ensure a new filesystem is still mounted after a reboot?
+
+<!-- notecardId: 1759749242317 -->
+
+add to /etc/fstab :
+```console
+/dev/sdb1   /mnt/ext4   ext4    rw  0  1
+```
+explanation :
+\<file system\> \<mount point\> \<type\> \<options\> \<dump\> \<pass\>
+
+## How do you find out if a filesystem is created but not mounted on a disk?
+
+<!-- notecardId: 1759749242323 -->
+
+```bash
+blkid /dev/vdc
+```
+
+
