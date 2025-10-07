@@ -277,7 +277,7 @@ cip@DESKTOP-KJIIPF2:~$ lspci
 ## What does lsblk do?
 
 <!-- notecardId: 1758518931041 -->
-provides detailed information about block devices present on your system
+provides information such as disk size, about block devices present on your system
 it displays the physical disk (e.g., sda) along with its partitions (e.g., sda1 to sda5)
 the term "disk" refers to the entire physical disk
 each "partition" is a section of that disk
@@ -1858,4 +1858,149 @@ explanation :
 blkid /dev/vdc
 ```
 
+## What does DAS stand for?
 
+directly attached storage
+
+## What does NAS stand for?
+
+network attached storage
+
+## What does SAN stand for?
+
+storage area network
+
+## What are the main caracteristics of DAS?
+ 
+block based storage
+dedicated to a single host, 
+
+## What are the main caracteristics of NAS?
+
+file based storage
+ethernet based,
+
+## What are the main characteristics of SAN?
+
+block based storage,
+can use fiber channel protocol
+high availability,
+
+## What needs to be set up on the NFS server to secure access to files?
+
+a config in /etc/exports similar to this:
+```cmd
+/software/repos 10.61.35.201 10.61.35.202 10.61.35.203
+```
+explanation:
+shared path     whitelist of IPs
+and running the following command:
+```bash
+exportfs -a
+```
+or 
+```bash
+exportfs -o 10.61.35.201:/software/repos
+```
+
+## What needs to be set up on the client to access NFS files?
+
+```bash
+mount 10.61.112.101:/software/repos /mnt/software/repos
+```
+
+## What does LVM stand for and what does it do?
+
+logical volume manager
+allow for grouping of multiple physical volumes into a single volume group that can then be broken up into logical volumes
+
+## How do you create a physical volume?
+
+```bash
+pvcreate /dev/sdb
+```
+
+## How do you create a volume group?
+
+```bash
+vgcreate caleston_vg /dev/sdb
+```
+
+## How do you list physical volume details?
+
+```bash
+pvdisplay
+```
+
+## How do you display information about the volume group?
+
+```bash
+vgdisplay
+```
+
+## How do you create a 1G logical volume named vol1 with the volume group caleston_vg?
+
+```bash
+lvcreate -L 1G -n vol1 caleston_vg
+```
+
+## How do you list all logical volumes
+
+```bash
+lvs
+```
+
+## How do you resize the logical volume group and filesystem?
+
+check space available 
+```bash
+vgs
+```
+if free space is available add 1GB
+```bash
+lvresize -L +1G /dev/caleston_vg/vol1
+```
+resize de filesystem
+```bash
+resize2fs /dev/caleston_vg/vol1
+```
+check new filesystem size
+```bash
+df -hP /mnt/vol1
+```
+
+## What is another path besides /dev/caleston_vg/vol1 where volume can be accessed?
+
+```console
+/dev/mapper/caleston_vg-vol1
+```
+
+## What is the fix for vi when arrow keys in insert mode do not work correctly (insert uppercase letter instead of changing direction)?
+
+```console
+:set nocompatible
+```
+
+## How do you find out what port is used by a service?
+
+```bash
+sudo netstat -natulp | grep postgres | grep LISTEN
+```
+
+## What is the fix for vi when backspace in insert mode doesn't work correctly (not deleting characters)?
+
+```console
+:set backspace=2
+```
+
+## How do you save your vi settings so that they apply to all files?
+
+in your home folder
+```bash
+vi .vimrc
+```
+add
+```console
+set nocompatible
+set backspace=2
+```
