@@ -1860,33 +1860,47 @@ blkid /dev/vdc
 
 ## What does DAS stand for?
 
+<!-- notecardId: 1759826641085 -->
+
 directly attached storage
 
 ## What does NAS stand for?
+
+<!-- notecardId: 1759826641089 -->
 
 network attached storage
 
 ## What does SAN stand for?
 
+<!-- notecardId: 1759826641093 -->
+
 storage area network
 
 ## What are the main caracteristics of DAS?
+
+<!-- notecardId: 1759826641097 -->
  
 block based storage
 dedicated to a single host, 
 
 ## What are the main caracteristics of NAS?
 
+<!-- notecardId: 1759826641100 -->
+
 file based storage
 ethernet based,
 
 ## What are the main characteristics of SAN?
+
+<!-- notecardId: 1759826641104 -->
 
 block based storage,
 can use fiber channel protocol
 high availability,
 
 ## What needs to be set up on the NFS server to secure access to files?
+
+<!-- notecardId: 1759826641107 -->
 
 a config in /etc/exports similar to this:
 ```cmd
@@ -1905,16 +1919,22 @@ exportfs -o 10.61.35.201:/software/repos
 
 ## What needs to be set up on the client to access NFS files?
 
+<!-- notecardId: 1759826641111 -->
+
 ```bash
 mount 10.61.112.101:/software/repos /mnt/software/repos
 ```
 
 ## What does LVM stand for and what does it do?
 
+<!-- notecardId: 1759826641115 -->
+
 logical volume manager
 allow for grouping of multiple physical volumes into a single volume group that can then be broken up into logical volumes
 
 ## How do you create a physical volume?
+
+<!-- notecardId: 1759826641118 -->
 
 ```bash
 pvcreate /dev/sdb
@@ -1922,17 +1942,23 @@ pvcreate /dev/sdb
 
 ## How do you create a volume group?
 
+<!-- notecardId: 1759826641122 -->
+
 ```bash
 vgcreate caleston_vg /dev/sdb
 ```
 
 ## How do you list physical volume details?
 
+<!-- notecardId: 1759826641126 -->
+
 ```bash
 pvdisplay
 ```
 
 ## How do you display information about the volume group?
+
+<!-- notecardId: 1759826641129 -->
 
 ```bash
 vgdisplay
@@ -1946,11 +1972,15 @@ lvcreate -L 1G -n vol1 caleston_vg
 
 ## How do you list all logical volumes
 
+<!-- notecardId: 1759826641136 -->
+
 ```bash
 lvs
 ```
 
 ## How do you resize the logical volume group and filesystem?
+
+<!-- notecardId: 1759826641140 -->
 
 check space available 
 ```bash
@@ -1977,11 +2007,15 @@ df -hP /mnt/vol1
 
 ## What is the fix for vi when arrow keys in insert mode do not work correctly (insert uppercase letter instead of changing direction)?
 
+<!-- notecardId: 1759826641148 -->
+
 ```console
 :set nocompatible
 ```
 
 ## How do you find out what port is used by a service?
+
+<!-- notecardId: 1759826641151 -->
 
 ```bash
 sudo netstat -natulp | grep postgres | grep LISTEN
@@ -1989,11 +2023,15 @@ sudo netstat -natulp | grep postgres | grep LISTEN
 
 ## What is the fix for vi when backspace in insert mode doesn't work correctly (not deleting characters)?
 
+<!-- notecardId: 1759826641155 -->
+
 ```console
 :set backspace=2
 ```
 
 ## How do you save your vi settings so that they apply to all files?
+
+<!-- notecardId: 1759826641159 -->
 
 in your home folder
 ```bash
