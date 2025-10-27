@@ -2,7 +2,7 @@
 
 ##   What command can tell you if another command is internal / built in or external?
 
-<!-- notecardId: 1758107635778 -->
+<!-- notecardId: 1761546057141 -->
 
 ```console
     cip@DESKTOP-KJIIPF2:~$ type cd
@@ -10,7 +10,7 @@
 ```
 ##   What is an argument?
 
-<!-- notecardId: 1758107635780 -->
+<!-- notecardId: 1761546057144 -->
 
 A command is split into an array of strings called arguments:
 ```bash
@@ -22,7 +22,7 @@ A command is split into an array of strings called arguments:
 ```
 ##   What is an option?
 
-<!-- notecardId: 1758107635782 -->
+<!-- notecardId: 1761546057146 -->
 
 An option is a type of argument modifying the behavior of a command :
 ```bash
@@ -32,14 +32,14 @@ An option is a type of argument modifying the behavior of a command :
 ```
 ##   How does pushd and popd work?
 
-<!-- notecardId: 1758107635784 -->
+<!-- notecardId: 1761546057148 -->
 
 pushd adds a new current directory in the stack and switches to it
 popd removes last entry from the stack and changes the current directory back
 
 ##    How do you coppy a directory?
 
-<!-- notecardId: 1758107635787 -->
+<!-- notecardId: 1761546057151 -->
 
 ```console
 cip@DESKTOP-KJIIPF2:~/testcp$ tree
@@ -71,7 +71,7 @@ cip@DESKTOP-KJIIPF2:~/testcp$ tree
 
 ##   How do you display a long list of files from newest to oldest?
 
-<!-- notecardId: 1758107635789 -->
+<!-- notecardId: 1761546057153 -->
 
 ```bash
     ls -lt
@@ -81,7 +81,7 @@ cip@DESKTOP-KJIIPF2:~/testcp$ tree
 
 ##   How do you display a long list of files from oldest to newest?
 
-<!-- notecardId: 1758107635791 -->
+<!-- notecardId: 1761546057155 -->
 
 ```bash
     ls -ltr
@@ -92,7 +92,7 @@ cip@DESKTOP-KJIIPF2:~/testcp$ tree
 
 ##   How do you search man pages for a keyword?
 
-<!-- notecardId: 1758107635794 -->
+<!-- notecardId: 1761546057158 -->
 
 ```console
     cip@DESKTOP-KJIIPF2:~$ apropos cmd
@@ -103,7 +103,7 @@ cip@DESKTOP-KJIIPF2:~/testcp$ tree
 
 ##   How do you find out what is the current shell?
 
-<!-- notecardId: 1758107635796 -->
+<!-- notecardId: 1761546057160 -->
 
 ```console
     cip@DESKTOP-KJIIPF2:~$ echo $SHELL
@@ -112,7 +112,7 @@ cip@DESKTOP-KJIIPF2:~/testcp$ tree
 
 ##   How do you change the current shell?
 
-<!-- notecardId: 1758107635798 -->
+<!-- notecardId: 1761546057162 -->
 
 ```console
     cip@DESKTOP-KJIIPF2:~$ chsh
@@ -120,7 +120,7 @@ cip@DESKTOP-KJIIPF2:~/testcp$ tree
 
 ##   How do you create shorter version of a command?
 
-<!-- notecardId: 1758107635801 -->
+<!-- notecardId: 1761546057165 -->
 
 ```bash
     alias dt=date
@@ -128,7 +128,7 @@ cip@DESKTOP-KJIIPF2:~/testcp$ tree
 
 ##   How do you create a new environment variable?
 
-<!-- notecardId: 1758107635803 -->
+<!-- notecardId: 1761546057167 -->
 
 ```bash
     export varname=value
@@ -136,7 +136,7 @@ cip@DESKTOP-KJIIPF2:~/testcp$ tree
 
 ##   How do you add a path to the $PATH?
 
-<!-- notecardId: 1758107635805 -->
+<!-- notecardId: 1761546057169 -->
 
 ```bash
     export PATH=$PATH:/new/path
@@ -144,7 +144,7 @@ cip@DESKTOP-KJIIPF2:~/testcp$ tree
 
 ##   In what file can you set custom user settings?
 
-<!-- notecardId: 1758107635808 -->
+<!-- notecardId: 1761546057171 -->
 
 ```bash
     ~/.profile
@@ -152,7 +152,7 @@ cip@DESKTOP-KJIIPF2:~/testcp$ tree
 
 ##   What does the $PS1 variable do?
 
-<!-- notecardId: 1758107635810 -->
+<!-- notecardId: 1761546057174 -->
 
 tells the terminal what text to display before each command
 ```console
@@ -161,7 +161,7 @@ tells the terminal what text to display before each command
 
 ## How do you list hidden files?
 
-<!-- notecardId: 1758111131313 -->
+<!-- notecardId: 1761546057180 -->
 
 ```bash
     ls -a
@@ -170,13 +170,13 @@ tells the terminal what text to display before each command
 
 ## What is the linux kernel?
 
-<!-- notecardId: 1758518931010 -->
+<!-- notecardId: 1761546057182 -->
 
 A kernel is the core interface between computer hardware and application processes.
 
 ## How do you find the kernel version?
 
-<!-- notecardId: 1758518931013 -->
+<!-- notecardId: 1761546057184 -->
 
 ```console
     cip@DESKTOP-KJIIPF2:~$ uname -r
@@ -190,26 +190,26 @@ distro-specific   1-microsoft-standard-WSL2
 
 ## How is memmory divied in linux?
 
-<!-- notecardId: 1758518931016 -->
+<!-- notecardId: 1761546057186 -->
 
 between kernel space and user space
 
 ## What runs in kernel space?
 
-<!-- notecardId: 1758518931019 -->
+<!-- notecardId: 1761546057188 -->
 
 kernel code and modules
 device drivers
 
 ## What runs in user space?
 
-<!-- notecardId: 1758518931022 -->
+<!-- notecardId: 1761546057190 -->
 
 applications
 
 ## How do you find the os version?
 
-<!-- notecardId: 1758518931025 -->
+<!-- notecardId: 1761546057192 -->
 
 ```console
 cip@DESKTOP-KJIIPF2:~$ cat /etc/os-release
@@ -230,14 +230,14 @@ LOGO=ubuntu-logo
 
 ## What does dmesg do?
 
-<!-- notecardId: 1758518931028 -->
+<!-- notecardId: 1761546057195 -->
 
 the dmesg tool displays messages from the kernel's ring buffer,
 boot-time logs that reveal how hardware was detected and configured
 
 ## What does udevadm do?
 
-<!-- notecardId: 1758518931031 -->
+<!-- notecardId: 1761546057197 -->
 
 the udevadm utility is used to query and monitor device events
 ```console
@@ -248,7 +248,7 @@ see info about a specific device
 
 ## What does udevadm monitor do?
 
-<!-- notecardId: 1758518931034 -->
+<!-- notecardId: 1761546057199 -->
 
 monitor kernel uEvents in real time
 ```console
@@ -260,7 +260,7 @@ KERNEL - the kernel uevent
 
 ## What does lspci do?
 
-<!-- notecardId: 1758518931037 -->
+<!-- notecardId: 1761546057201 -->
 
 lists all PCI devices configured in your system,
 such as Ethernet cards, RAID controllers, video cards, and wireless adapters
@@ -276,7 +276,7 @@ cip@DESKTOP-KJIIPF2:~$ lspci
 
 ## What does lsblk do?
 
-<!-- notecardId: 1758518931041 -->
+<!-- notecardId: 1761546057203 -->
 provides information such as disk size, about block devices present on your system
 it displays the physical disk (e.g., sda) along with its partitions (e.g., sda1 to sda5)
 the term "disk" refers to the entire physical disk
@@ -298,7 +298,7 @@ sdc   8:32   0     1T  0 disk /snap
 
 ## How do you display cpu info?
 
-<!-- notecardId: 1758518931044 -->
+<!-- notecardId: 1761546057206 -->
 
 ```console
 cip@DESKTOP-KJIIPF2:~$ lscpu
@@ -319,7 +319,7 @@ Vendor ID:               GenuineIntel
 
 ## How do you find memory configuration information?
 
-<!-- notecardId: 1758518931046 -->
+<!-- notecardId: 1761546057208 -->
 
 ```console
 cip@DESKTOP-KJIIPF2:~$ lsmem
@@ -334,7 +334,7 @@ Total offline memory:      0B
 
 ## How do you find memory usage statistics in megabites?
 
-<!-- notecardId: 1758518931050 -->
+<!-- notecardId: 1761546057210 -->
 
 ```console
 cip@DESKTOP-KJIIPF2:~$ free -m
@@ -345,7 +345,7 @@ Swap:           2048           0        2048
 
 ## How do you find comprehensive details about the system's hardware configuration?
 
-<!-- notecardId: 1758518931053 -->
+<!-- notecardId: 1761546057212 -->
 
 ```console
 cip@DESKTOP-KJIIPF2:~$ lshw
@@ -359,7 +359,7 @@ desktop-kjiipf2
 
 ## What is the linux boot sequence?
 
-<!-- notecardId: 1758521744275 -->
+<!-- notecardId: 1761546057215 -->
 
 BIOS POST (Power on self test, tests hardware is running ok)
 Boot Loader (GRUB2) (allows os selection)
@@ -368,7 +368,7 @@ Service Initialization (INIT Process) (systemd)
 
 ## How do you check what init process is used?
 
-<!-- notecardId: 1758521744278 -->
+<!-- notecardId: 1761546057217 -->
 
 ```console
 cip@DESKTOP-KJIIPF2:~$ sudo ls -l /sbin/init
@@ -377,7 +377,7 @@ lrwxrwxrwx 1 root root 22 Jun  4 15:24 /sbin/init -> ../lib/systemd/systemd
 
 ## What does the runlevel command do?
 
-<!-- notecardId: 1758521744282 -->
+<!-- notecardId: 1761546057219 -->
 
 it determines the current runlevel of a Linux system
 ```console
@@ -389,7 +389,7 @@ runlevel 3 is console mode
 
 ## How do you check the current systemd target?
 
-<!-- notecardId: 1758521744284 -->
+<!-- notecardId: 1761546057221 -->
 
 ```console
 cip@DESKTOP-KJIIPF2:~$ systemctl get-default
@@ -398,7 +398,7 @@ graphical.target
 
 ## How do you switch systemd from graphical to console mode?
 
-<!-- notecardId: 1758521744287 -->
+<!-- notecardId: 1761546057228 -->
 
 ```console
 systemctl set-default multi-user.target
@@ -406,7 +406,7 @@ systemctl set-default multi-user.target
 
 ## How do you switch systemd from console to graphical mode?
 
-<!-- notecardId: 1758521744291 -->
+<!-- notecardId: 1761546057234 -->
 
 ```console
 systemctl set-default graphical.target
@@ -414,13 +414,13 @@ systemctl set-default graphical.target
 
 ## What is runlevel called in systemd?
 
-<!-- notecardId: 1758521744294 -->
+<!-- notecardId: 1761546057239 -->
 
 target
 
 ## What are the 3 types of files in linux?
 
-<!-- notecardId: 1758521744297 -->
+<!-- notecardId: 1761546057245 -->
 
 Regular
 Directory
@@ -428,7 +428,7 @@ Special
     
 ## What are the 6 types of special files in linux?
 
-<!-- notecardId: 1758521744301 -->
+<!-- notecardId: 1761546057250 -->
     Character (serial devices)(mouse, keyboard)
     Block (read/write devices)(ram, hard disk)
     Links
@@ -441,7 +441,7 @@ Special
 
 ## How do you determine a file type?
 
-<!-- notecardId: 1758521744304 -->
+<!-- notecardId: 1761546057253 -->
 
 ```console
 cip@DESKTOP-KJIIPF2:~$ file ./snap
@@ -450,7 +450,7 @@ cip@DESKTOP-KJIIPF2:~$ file ./snap
 
 ## How do you determine a file type with the ls -l command?
 
-<!-- notecardId: 1758521744306 -->
+<!-- notecardId: 1761546057260 -->
 
 ```console
 cip@DESKTOP-KJIIPF2:~$ ls -l
@@ -469,76 +469,76 @@ b: Block device
 
 ## What is the purpose of /home?
 
-<!-- notecardId: 1758522667320 -->
+<!-- notecardId: 1761546057265 -->
 
 holds the home directories for all users except the root user
 the root user’s home directory is located at /root
 
 ## What is the purpose of /opt?
 
-<!-- notecardId: 1758523075485 -->
+<!-- notecardId: 1761546057267 -->
 
 holds third-party programs
 
 ## What is the purpose of /mnt?
 
-<!-- notecardId: 1758522667323 -->
+<!-- notecardId: 1761546057269 -->
 
 temporarily mounting filesystems
 
 ## What is the purpose of /tmp?
 
-<!-- notecardId: 1758522667326 -->
+<!-- notecardId: 1761546057271 -->
 
 storing temporary data
 
 ## What is the purpose of /media?
 
-<!-- notecardId: 1758522667328 -->
+<!-- notecardId: 1761546057274 -->
 
 it's used for all external media (usb device, etc)
 
 ## What is the purpose of /dev?
 
-<!-- notecardId: 1758522667332 -->
+<!-- notecardId: 1761546057276 -->
 
 contains special block and character device files
 (hardware devices such as external hard disks, mice, keyboards, etc)
 
 ## What is the purpose of /bin?
 
-<!-- notecardId: 1758522667335 -->
+<!-- notecardId: 1761546057278 -->
 
 contains essential programs and binaries 
 (cp, mv, mkdir, date, etc)
 
 ## What is the purpose of /etc?
 
-<!-- notecardId: 1758522667338 -->
+<!-- notecardId: 1761546057280 -->
 
 stores the majority of Linux configuration files
 
 ## What is the purpose of /lib and /lib64?
 
-<!-- notecardId: 1758522667341 -->
+<!-- notecardId: 1761546057282 -->
 
 to store shared libraries required by programs during runtime
 
 ## What is the purpose of /usr?
 
-<!-- notecardId: 1758522667344 -->
+<!-- notecardId: 1761546057284 -->
 
 stores userland applications and their data
 
 ## What is the purpose of /var?
 
-<!-- notecardId: 1758522667347 -->
+<!-- notecardId: 1761546057298 -->
 
 stores logs and cached data
 
 ## How do you find details about the mounted filesystems?
 
-<!-- notecardId: 1758522667350 -->
+<!-- notecardId: 1761546057306 -->
 
 ```console
 cip@DESKTOP-KJIIPF2:~$ df -hP
@@ -553,7 +553,7 @@ none            232G  172G   60G  75% /usr/lib/wsl/drivers
 
 ## What is the package manager for ubuntu/debian?
 
-<!-- notecardId: 1758526136074 -->
+<!-- notecardId: 1761546057310 -->
 
 DPKG 	 Base package manager 
 APT      Front-end 
@@ -564,7 +564,7 @@ APT-GET  command-line front-end
 
 ## What is the package manager for redhat/centos?
 
-<!-- notecardId: 1758526136078 -->
+<!-- notecardId: 1761546057314 -->
 
 RPM     Base package manager
 YUM     Front-end (automatically manage and resolve dependencies)
@@ -572,7 +572,7 @@ DNF     Feature-rich front-end (yum but better)
 
 ## How do you install a package in redhat?
 
-<!-- notecardId: 1758526136081 -->
+<!-- notecardId: 1761546057317 -->
 
 ```bash 
 rpm -ivh package.rpm
@@ -584,7 +584,7 @@ rpm -ivh package.rpm
 
 ## How do you uninstall a package with rpm?
 
-<!-- notecardId: 1758527375201 -->
+<!-- notecardId: 1761546057320 -->
 
 ```bash 
 rpm -e package
@@ -592,7 +592,7 @@ rpm -e package
 
 ## How do you upgrade a package with rpm?
 
-<!-- notecardId: 1758527375204 -->
+<!-- notecardId: 1761546057323 -->
 
 ```bash 
 rpm -Uvh package.rpm
@@ -600,7 +600,7 @@ rpm -Uvh package.rpm
 
 ## How do you query the database for details about installed packages with rpm?
 
-<!-- notecardId: 1758527375207 -->
+<!-- notecardId: 1761546057326 -->
 
 ```bash 
 rpm -q package
@@ -608,7 +608,7 @@ rpm -q package
 
 ## How do you verify an installed package against its original metadata with rpm?
 
-<!-- notecardId: 1758527375210 -->
+<!-- notecardId: 1761546057329 -->
 
 ```bash 
 rpm -Vf path/to/file
@@ -616,7 +616,7 @@ rpm -Vf path/to/file
 
 ## Where are yum repo files located?
 
-<!-- notecardId: 1758527375213 -->
+<!-- notecardId: 1761546057331 -->
 
 ```bash
 /etc/yum.repos.d
@@ -624,7 +624,7 @@ rpm -Vf path/to/file
 
 ## How do you list yum repositories?
 
-<!-- notecardId: 1758527375216 -->
+<!-- notecardId: 1761546057334 -->
 
 ```bash
 yum repolist
@@ -632,7 +632,7 @@ yum repolist
 
 ## How do you identify which package provides a specific command e.g. scp?
 
-<!-- notecardId: 1758527375219 -->
+<!-- notecardId: 1761546057336 -->
 
 ```bash
 yum provides scp
@@ -640,7 +640,7 @@ yum provides scp
 
 ## How do you uninstall a package with yum?
 
-<!-- notecardId: 1758527375223 -->
+<!-- notecardId: 1761546057339 -->
 
 ```bash
 yum remove httpd
@@ -648,7 +648,7 @@ yum remove httpd
 
 ## How do you upgrade a package with yum?
 
-<!-- notecardId: 1758527375225 -->
+<!-- notecardId: 1761546057341 -->
 
 ```bash
 yum update telnet
@@ -656,7 +656,7 @@ yum update telnet
 
 ## How do you upgrade all packages with yum?
 
-<!-- notecardId: 1758527375228 -->
+<!-- notecardId: 1761546057344 -->
 
 ```bash
 yum update
@@ -664,7 +664,7 @@ yum update
 
 ## How do you install a package with dpkg?
 
-<!-- notecardId: 1758547405756 -->
+<!-- notecardId: 1761546057346 -->
 
 ```bash 
 dpkg -i telnet.deb 
@@ -672,7 +672,7 @@ dpkg -i telnet.deb
 
 ## How do you uninstall a package with dpkg?
 
-<!-- notecardId: 1758547405759 -->
+<!-- notecardId: 1761546057348 -->
 
 ```bash 
 dpkg -r telnet.deb 
@@ -680,7 +680,7 @@ dpkg -r telnet.deb
 
 ## How do you list installed packages with dpkg?
 
-<!-- notecardId: 1758547405761 -->
+<!-- notecardId: 1761546057350 -->
 
 ```console 
 cip@DESKTOP-KJIIPF2:~$ dpkg -l
@@ -694,7 +694,7 @@ Desired=Unknown/Install/Remove/Purge/Hold
 
 ## How do you check the status of an installed package with dpkg?
 
-<!-- notecardId: 1758547405764 -->
+<!-- notecardId: 1761546057353 -->
 
 ```bash 
 dpkg -s telnet.deb 
@@ -702,7 +702,7 @@ dpkg -s telnet.deb
 
 ## How do you install a package with apt?
 
-<!-- notecardId: 1758547405766 -->
+<!-- notecardId: 1761546057355 -->
 
 ```bash 
 apt install gimp
@@ -710,7 +710,7 @@ apt install gimp
 
 ## What is the location of the repo files for apt?
 
-<!-- notecardId: 1758547405769 -->
+<!-- notecardId: 1761546057357 -->
 
 ```console
 /etc/apt/sources.list
@@ -718,7 +718,7 @@ apt install gimp
 
 ## How do you refresh the package repository information with apt?
 
-<!-- notecardId: 1758547405771 -->
+<!-- notecardId: 1761546057360 -->
 
 ```console 
 cip@DESKTOP-KJIIPF2:~$ sudo apt update
@@ -731,7 +731,7 @@ Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
 
 ## How do you upgrade installed packages to the latest version?
 
-<!-- notecardId: 1758547405773 -->
+<!-- notecardId: 1761546057362 -->
 
 ```console
 cip@DESKTOP-KJIIPF2:~$ sudo apt upgrade
@@ -753,7 +753,7 @@ The following packages will be upgraded:
 
 ## How do you remove an installed package with apt?
 
-<!-- notecardId: 1758547405776 -->
+<!-- notecardId: 1761546057364 -->
 
 ```bash
 apt remove gimp
@@ -761,7 +761,7 @@ apt remove gimp
 
 ## How do you search for a package in a repository with apt?
 
-<!-- notecardId: 1758547405778 -->
+<!-- notecardId: 1761546057367 -->
 
 ```bash
 apt search telnet
@@ -769,7 +769,7 @@ apt search telnet
 
 ## How do you check a file or folder size?
 
-<!-- notecardId: 1758547405780 -->
+<!-- notecardId: 1761546057369 -->
 
 ```console
 cip@DESKTOP-KJIIPF2:~$ du -sh snap/
@@ -784,7 +784,7 @@ drwx------ 3 cip cip 4.0K Sep 17 14:58 snap
 
 ## Create a tar file named test.tar containing files : file1 and file2.
 
-<!-- notecardId: 1758547405783 -->
+<!-- notecardId: 1761546057372 -->
 
 ```bash
 tar -cf test.tar file1 file2
@@ -792,7 +792,7 @@ tar -cf test.tar file1 file2
 
 ## List the contents of a tar file.
 
-<!-- notecardId: 1758547405785 -->
+<!-- notecardId: 1761546057374 -->
 
 ```bash
 tar -tf test.tar
@@ -800,7 +800,7 @@ tar -tf test.tar
 
 ## Extract the contents of a tar file.
 
-<!-- notecardId: 1758547405787 -->
+<!-- notecardId: 1761546057377 -->
 
 ```bash
 tar -xf test.tar
@@ -808,7 +808,7 @@ tar -xf test.tar
 
 ## Create a compressed tar file with the tar command.
 
-<!-- notecardId: 1758547405790 -->
+<!-- notecardId: 1761546057379 -->
 
 ```bash
 tar -zcf test.tar file1 file2
@@ -816,24 +816,24 @@ tar -zcf test.tar file1 file2
 
 ## What do bzip2 gzip and xz commands do?
 
-<!-- notecardId: 1758547405792 -->
+<!-- notecardId: 1761546057381 -->
 
 compress files
 
 ## What are the uncompress commands for bz2, gz and xz file formats?
 
-<!-- notecardId: 1758547405795 -->
+<!-- notecardId: 1761546057384 -->
 
 bunzip2, gunzip, unxz
 
 ## Can you read compressed files without uncompressing them, if yes with what tools ?
 
-<!-- notecardId: 1758547405797 -->
+<!-- notecardId: 1761546057387 -->
 yes with zcat, bzcat, xzcat
 
 ## How can you search for a file in linux?
 
-<!-- notecardId: 1758547405799 -->
+<!-- notecardId: 1761546057389 -->
 
 ```bash
 locate filename
@@ -845,7 +845,7 @@ find some/path -name filename.txt
 
 ## How do you manually update the db for locate command?
 
-<!-- notecardId: 1758547405802 -->
+<!-- notecardId: 1761546057391 -->
 
 ```bash
 updatedb
@@ -853,7 +853,7 @@ updatedb
 
 ## How do you perform a case sensitive search within a file?
 
-<!-- notecardId: 1758558781383 -->
+<!-- notecardId: 1761546057394 -->
 
 ```bash 
 grep seccond sample.txt
@@ -861,7 +861,7 @@ grep seccond sample.txt
 
 ## How do you perform a case insensitive search within a file?
 
-<!-- notecardId: 1758558781386 -->
+<!-- notecardId: 1761546057397 -->
 
 ```bash
 grep -i capital sample.txt
@@ -869,7 +869,7 @@ grep -i capital sample.txt
 
 ## How do you perform a search on all files in a directory?
 
-<!-- notecardId: 1758558781388 -->
+<!-- notecardId: 1761546057400 -->
 
 ```bash 
 grep -r "some text" /some/folder
@@ -877,7 +877,7 @@ grep -r "some text" /some/folder
 
 ## How do you find all lines that do not contain a particular string in a file?
 
-<!-- notecardId: 1758558781390 -->
+<!-- notecardId: 1761546057403 -->
 
 ```bash 
 grep -v printed sample.txt
@@ -885,7 +885,7 @@ grep -v printed sample.txt
 
 ## How do you find all lines in a file that contain a certain word?
 
-<!-- notecardId: 1758558781393 -->
+<!-- notecardId: 1761546057411 -->
 
 ```bash
 grep -w exam examples.txt
@@ -893,7 +893,7 @@ grep -w exam examples.txt
 
 ## How do you find all the lines matching a pattern and the line bellow and above?
 
-<!-- notecardId: 1758558781395 -->
+<!-- notecardId: 1761546057414 -->
 
 ```bash
 grep -A1 -B1 Chelsea premier-league-table.txt
@@ -901,7 +901,7 @@ grep -A1 -B1 Chelsea premier-league-table.txt
 
 ## How many io stream are there?
 
-<!-- notecardId: 1758559711211 -->
+<!-- notecardId: 1761546057417 -->
 
 standard 
     input
@@ -910,7 +910,7 @@ standard
 
 ## How do you redirect the output of a command to a file and overwrite it?
 
-<!-- notecardId: 1758559711214 -->
+<!-- notecardId: 1761546057420 -->
 
 ```bash
 echo tst > somefile.txt
@@ -918,7 +918,7 @@ echo tst > somefile.txt
 
 ## How do you redirect the output of a command to a file and append to it?
 
-<!-- notecardId: 1758559711216 -->
+<!-- notecardId: 1761546057427 -->
 
 ```bash
 echo tst >> somefile.txt
@@ -926,7 +926,7 @@ echo tst >> somefile.txt
 
 ## How do you redirect just the error output of a command to a file?
 
-<!-- notecardId: 1758559711219 -->
+<!-- notecardId: 1761546057435 -->
 
 ```bash
 ls /root 2> err.txt
@@ -934,7 +934,7 @@ ls /root 2> err.txt
 
 ## How do you force a command to execute without showing any error message?
 
-<!-- notecardId: 1758559711221 -->
+<!-- notecardId: 1761546057442 -->
 
 ```bash
 cat somemissingfile 2> /dev/null
@@ -942,7 +942,7 @@ cat somemissingfile 2> /dev/null
 
 ## How do you link the output of a command to input of another?
 
-<!-- notecardId: 1758559711224 -->
+<!-- notecardId: 1761546057448 -->
 
 ```bash
 echo $SHELL | tee shell.txt
@@ -950,43 +950,43 @@ echo $SHELL | tee shell.txt
 
 ## What does the tee command do?
 
-<!-- notecardId: 1758559711226 -->
+<!-- notecardId: 1761546057455 -->
 
 it reads from standard input to both standard output and files
 
 ## What makes tee different than redirect?
 
-<!-- notecardId: 1758559711229 -->
+<!-- notecardId: 1761546057457 -->
 
 it has one in and two outs, it will read from one source and write to both standard output and a file provided as argument, redirect has only one out it's file or standard output
 
 ## How do you switch from command mode to insert mode in vi?
 
-<!-- notecardId: 1758561896115 -->
+<!-- notecardId: 1761546057459 -->
 
 i
 
 ## How do you switch from insert mode to command mode in vi?
 
-<!-- notecardId: 1758561896117 -->
+<!-- notecardId: 1761546057461 -->
 
 esc
 
 ## How do you switch from the insert mode to the last line mode?
 
-<!-- notecardId: 1758561896119 -->
+<!-- notecardId: 1761546057464 -->
 
 :
 
 ## How do you switch from the last line mode to the command mode?
 
-<!-- notecardId: 1758561896122 -->
+<!-- notecardId: 1761546057467 -->
 
 esc
 
 ## How do you coppy and paste a line in command mode in vi?
 
-<!-- notecardId: 1758561896124 -->
+<!-- notecardId: 1761546057469 -->
 
 move cursor to line
 yy 
@@ -995,45 +995,45 @@ p
 
 ## How do you save a file in vi in command mode?
 
-<!-- notecardId: 1758561896126 -->
+<!-- notecardId: 1761546057471 -->
 
 ZZ
 
 ## How do you delete a letter in vi in command mode?
 
-<!-- notecardId: 1758561896128 -->
+<!-- notecardId: 1761546057474 -->
 
 move cursor to intended location
 x
 
 ## How do you delete a line in vi in command mode?
 
-<!-- notecardId: 1758561896131 -->
+<!-- notecardId: 1761546057476 -->
 
 move cursor to line
 dd
 
 ## How do you delete 3 lines from current line in vi in command mode?
 
-<!-- notecardId: 1758561896133 -->
+<!-- notecardId: 1761546057478 -->
 
 d3d
 
 ## How do you undo a change in vi in command mode?
 
-<!-- notecardId: 1758561896136 -->
+<!-- notecardId: 1761546057480 -->
 
 u
 
 ## How do you redo a change in vi in command mode?
 
-<!-- notecardId: 1758561896138 -->
+<!-- notecardId: 1761546057483 -->
 
 ctrl + r
 
 ## How do you search for a string in vi in command mode?
 
-<!-- notecardId: 1758561896140 -->
+<!-- notecardId: 1761546057485 -->
 
 /sometexttosearch
 will search from cursor down
@@ -1047,19 +1047,19 @@ to find previous occurence press N
 
 ## How do you save and exit from last line mode in vi?
 
-<!-- notecardId: 1758561896143 -->
+<!-- notecardId: 1761546057487 -->
 
 :wq
 
 ## How do you quit without saving from last line mode in vi?
 
-<!-- notecardId: 1758561896146 -->
+<!-- notecardId: 1761546057495 -->
 
 :q!
 
 ## What does the /etc/hosts file contain?
 
-<!-- notecardId: 1758873072759 -->
+<!-- notecardId: 1761546057500 -->
 
 hostname-to-IP mappings for that system
 the system does not verify whether the system's actual hostname 
@@ -1067,7 +1067,7 @@ matches the alias you defined
 
 ## What is the default priority between /etc/hosts and dns?
 
-<!-- notecardId: 1758873072762 -->
+<!-- notecardId: 1761546057506 -->
 
 /etc/hosts takes precedence over dns by default
 this can be changed in /etc/nsswitch.conf with config bellow
@@ -1075,7 +1075,7 @@ this can be changed in /etc/nsswitch.conf with config bellow
 
 ## What doest the /etc/resolv.conf file contain?
 
-<!-- notecardId: 1758873072765 -->
+<!-- notecardId: 1761546057512 -->
 
 dns ip, ex:
 ```console
@@ -1090,7 +1090,7 @@ when using a short hostname (web), the system will sequentially append each sear
 
 ## What are the most common DNS record types?
 
-<!-- notecardId: 1758873072768 -->
+<!-- notecardId: 1761546057518 -->
 
 A       map hostnames to IPv4 addresses
 ```console
@@ -1108,7 +1108,7 @@ food.web-server  eat.web-server,hungry.web-server
 
 ## What command can you use to query your dns server?
 
-<!-- notecardId: 1758873072770 -->
+<!-- notecardId: 1761546057520 -->
 
 ```console
 cip@DESKTOP-KJIIPF2:~$ nslookup www.google.com
@@ -1126,7 +1126,7 @@ Address: 2a00:1450:4001:80e::2004
 
 ## What other command besides nslookup can be used for dns query?
 
-<!-- notecardId: 1758873072773 -->
+<!-- notecardId: 1761546057522 -->
 
 ```console
 cip@DESKTOP-KJIIPF2:~$ dig www.google.com
@@ -1152,7 +1152,7 @@ www.google.com.         0       IN      A       142.250.185.68
 
 ## How do you inspect a host's interfaces?
 
-<!-- notecardId: 1758873072775 -->
+<!-- notecardId: 1761546057525 -->
 
 ```console
 cip@DESKTOP-KJIIPF2:~$ ip link
@@ -1165,7 +1165,7 @@ default qlen 1000
 
 ## How do you view or assign ip adresses to interfaces?
 
-<!-- notecardId: 1758890591091 -->
+<!-- notecardId: 1761546057527 -->
 
 view
 ```console
@@ -1192,7 +1192,7 @@ ip addr add 192.168.1.10/24 dev eth0
 
 ## How do you view the kernel's routing table?
 
-<!-- notecardId: 1758890591094 -->
+<!-- notecardId: 1761546057529 -->
 
 ```console
 cip@DESKTOP-KJIIPF2:~$ route
@@ -1204,7 +1204,7 @@ default         DESKTOP-KJIIPF2 0.0.0.0         UG    0      0        0 eth0
 
 ## How do you configure a default gateway (192.168.2.1)?
 
-<!-- notecardId: 1758890591098 -->
+<!-- notecardId: 1761546057532 -->
 
 ```bash
 ip route add default via 192.168.2.1
@@ -1212,7 +1212,7 @@ ip route add default via 192.168.2.1
 
 ## How do you configure a specific route for network 192.168.1.0 using gateway 192.168.2.1?
 
-<!-- notecardId: 1758890591101 -->
+<!-- notecardId: 1761546057534 -->
 
 ```bash
 ip route add 192.168.1.0/24 via 192.168.2.1
@@ -1220,13 +1220,13 @@ ip route add 192.168.1.0/24 via 192.168.2.1
 
 ## What can be used interchangeably with the word default in most networking commands?
 
-<!-- notecardId: 1758890591103 -->
+<!-- notecardId: 1761546057537 -->
 
 0.0.0.0
 
 ## How do you change the state of network interface eth0 to up?
 
-<!-- notecardId: 1758890591106 -->
+<!-- notecardId: 1761546057539 -->
 
 ```bash 
 sudo ifconfig eth0 up
@@ -1234,7 +1234,7 @@ sudo ifconfig eth0 up
 
 ## Where is the file containing information about a user account?
 
-<!-- notecardId: 1758890591108 -->
+<!-- notecardId: 1761546057541 -->
 
 ```console
 /etc/passwd
@@ -1242,7 +1242,7 @@ sudo ifconfig eth0 up
 
 ## Where is the file containing information about user groups?
 
-<!-- notecardId: 1758890591110 -->
+<!-- notecardId: 1761546057544 -->
 
 ```console
 /etc/group
@@ -1250,7 +1250,7 @@ sudo ifconfig eth0 up
 
 ## What command can provide user details?
 
-<!-- notecardId: 1758890591113 -->
+<!-- notecardId: 1761546057546 -->
 
 ```console
 cip@DESKTOP-KJIIPF2:~$ id cip
@@ -1259,7 +1259,7 @@ uid=1000(cip) gid=1000(cip) groups=1000(cip),4(adm),20(dialout),24(cdrom),25(flo
 
 ## How do can you see what accounts are logged in on the machine?
 
-<!-- notecardId: 1758890591115 -->
+<!-- notecardId: 1761546057548 -->
 
 ```console
 cip@DESKTOP-KJIIPF2:~$ who
@@ -1268,7 +1268,7 @@ cip      pts/1        2025-09-26 10:48
 
 ## How can you see a history of who logged in on the machine?
 
-<!-- notecardId: 1758890591118 -->
+<!-- notecardId: 1761546057551 -->
 
 ```cip@DESKTOP-KJIIPF2:~$ last
 reboot   system boot  5.15.133.1-micro Fri Sep 26 10:48   still running
@@ -1277,7 +1277,7 @@ reboot   system boot  5.15.133.1-micro Fri Sep 26 09:05   still running
 
 ## How can you switch from one user to another?
 
-<!-- notecardId: 1758890591120 -->
+<!-- notecardId: 1761546057553 -->
 
 ```bash
 su username
@@ -1285,7 +1285,7 @@ su username
 
 ## Where is the file containing users with sudo rights?
 
-<!-- notecardId: 1758890591122 -->
+<!-- notecardId: 1761546057555 -->
 
 ```console
 /etc/sudoers
@@ -1293,7 +1293,7 @@ su username
 
 ## How can you set a nologin shell for the root user?
 
-<!-- notecardId: 1758890591125 -->
+<!-- notecardId: 1761546057558 -->
 
 go to 
 ```console
@@ -1310,26 +1310,26 @@ root:x:0:0:root:/root:/bin/bash
 
 ## Given the following row from a sudoers file "%dev ALL=(ALL:ALL) All" explain the first ALL.
 
-<!-- notecardId: 1758890591127 -->
+<!-- notecardId: 1761546057560 -->
 
 it represents the list of hosts the user can run a list of commands on
 in a normal setup there is just one host the localhost
 
 ## Given the following row from a sudoers file "%dev ALL=(ALL:ALL) All" explain the part (ALL:ALL).
 
-<!-- notecardId: 1758890591130 -->
+<!-- notecardId: 1761546057562 -->
 
 it represents the users and groups the user can run commands as
 
 ## Given the following row from a sudoers file "%dev ALL=(ALL:ALL) All" explain the last ALL.
 
-<!-- notecardId: 1758890591132 -->
+<!-- notecardId: 1761546057564 -->
 
 it represents the list of commands the user can run
 
 ## In what file are the user passwords stored in?
 
-<!-- notecardId: 1758890591135 -->
+<!-- notecardId: 1761546057567 -->
 
 ```console
 /etc/shadow
@@ -1337,7 +1337,7 @@ it represents the list of commands the user can run
 
 ## How can you create a new user?
 
-<!-- notecardId: 1758890591137 -->
+<!-- notecardId: 1761546057569 -->
 
 ```bash
 useradd bob
@@ -1345,7 +1345,7 @@ useradd bob
 
 ## How can you set a password for a user?
 
-<!-- notecardId: 1758890591139 -->
+<!-- notecardId: 1761546057571 -->
 
 ```bash 
 passwd bob
@@ -1353,7 +1353,7 @@ passwd bob
 
 ## How can you change password for the current user?
 
-<!-- notecardId: 1758890591142 -->
+<!-- notecardId: 1761546057573 -->
 
 ```bash
 passwd
@@ -1361,7 +1361,7 @@ passwd
 
 ## How can you check the current username?
 
-<!-- notecardId: 1758890591144 -->
+<!-- notecardId: 1761546057575 -->
 
 ```bash
 whoami
@@ -1369,7 +1369,7 @@ whoami
 
 ## How can you create a new user and specify a uid?
 
-<!-- notecardId: 1758890591147 -->
+<!-- notecardId: 1761546057577 -->
 
 ```bash
 useradd -u 1009 bob
@@ -1377,7 +1377,7 @@ useradd -u 1009 bob
 
 ## How can you create a new user and specify a guid?
 
-<!-- notecardId: 1758890591149 -->
+<!-- notecardId: 1761546057579 -->
 
 ```bash
 useradd -g 1009 bob
@@ -1385,7 +1385,7 @@ useradd -g 1009 bob
 
 ## How can you create a new user and specify a custom home dir?
 
-<!-- notecardId: 1758890591151 -->
+<!-- notecardId: 1761546057580 -->
 
 ```bash
 useradd -d /home/some/project bob
@@ -1393,7 +1393,7 @@ useradd -d /home/some/project bob
 
 ## How can you create a new user and specify a custom login shell?
 
-<!-- notecardId: 1758890591154 -->
+<!-- notecardId: 1761546057582 -->
 
 ```bash
 useradd -s /bin/bash bob
@@ -1401,7 +1401,7 @@ useradd -s /bin/bash bob
 
 ## How can you create a new user and specify a custom comment?
 
-<!-- notecardId: 1758890591157 -->
+<!-- notecardId: 1761546057585 -->
 
 ```bash
 useradd -c "nice guy" bob
@@ -1409,7 +1409,7 @@ useradd -c "nice guy" bob
 
 ## How do you delete a user?
 
-<!-- notecardId: 1758890591159 -->
+<!-- notecardId: 1761546057589 -->
 
 ```bash
 userdel bob
@@ -1417,7 +1417,7 @@ userdel bob
 
 ## How do you add a new group with custom gid?
 
-<!-- notecardId: 1758890591161 -->
+<!-- notecardId: 1761546057591 -->
 
 ```bash 
 groupadd -g 1011 dev
@@ -1425,7 +1425,7 @@ groupadd -g 1011 dev
 
 ## How do you delete a group?
 
-<!-- notecardId: 1758890591164 -->
+<!-- notecardId: 1761546057594 -->
 
 ```bash 
 groupdel dev
@@ -1433,49 +1433,49 @@ groupdel dev
 
 ## What is the octal value of the execute permission?
 
-<!-- notecardId: 1759148483362 -->
+<!-- notecardId: 1761546057596 -->
 
 1
 
 ## What is the octal value of the write permission?
 
-<!-- notecardId: 1759148483365 -->
+<!-- notecardId: 1761546057598 -->
 
 2
 
 ## What is the octal value of the read permission?
 
-<!-- notecardId: 1759148483368 -->
+<!-- notecardId: 1761546057600 -->
 
 4
 
 ## What is the order in which file permissions are listed?
 
-<!-- notecardId: 1759148483370 -->
+<!-- notecardId: 1761546057602 -->
 
 user group others
 
 ## If the user is the owner of the file which permissions apply?
 
-<!-- notecardId: 1759148483372 -->
+<!-- notecardId: 1761546057605 -->
 
 only the user ones
 
 ## If the user is not the owner but is in the same group as the owner which permissions apply?
 
-<!-- notecardId: 1759148483375 -->
+<!-- notecardId: 1761546057607 -->
 
 only the group ones
 
 ## If the user is not the owner or in the same group as the owner which permissions apply?
 
-<!-- notecardId: 1759148483377 -->
+<!-- notecardId: 1761546057609 -->
 
 only the others 
 
 ## How do you change the permissions on a file?
 
-<!-- notecardId: 1759148483380 -->
+<!-- notecardId: 1761546057611 -->
 
 ```bash
 chmod 777 file
@@ -1483,7 +1483,7 @@ chmod 777 file
 
 ## How do you change the ownership of a file?
 
-<!-- notecardId: 1759148483382 -->
+<!-- notecardId: 1761546057613 -->
 
 ```bash
 chown user:group some_file
@@ -1491,7 +1491,7 @@ chown user:group some_file
 
 ## How do you copy an ssh key to a remote server?
 
-<!-- notecardId: 1759148483384 -->
+<!-- notecardId: 1761546057615 -->
 
 ```bash
 ssh-copy-id user@hostname
@@ -1499,7 +1499,7 @@ ssh-copy-id user@hostname
 
 ## What file contains the public keys that can login to the server?
 
-<!-- notecardId: 1759148483387 -->
+<!-- notecardId: 1761546057617 -->
 
 ```console
 /home/some_user/.ssh/authorized_keys
@@ -1507,7 +1507,7 @@ ssh-copy-id user@hostname
 
 ## What command can you use to coppy files over ssh?
 
-<!-- notecardId: 1759148483389 -->
+<!-- notecardId: 1761546057619 -->
 
 ```bash
 scp some/local/path/file hostname:/some/remote/path
@@ -1515,7 +1515,7 @@ scp some/local/path/file hostname:/some/remote/path
 
 ## What flags are used by scp to coppy a folder and preserve permissions?
 
-<!-- notecardId: 1759148483391 -->
+<!-- notecardId: 1761546057621 -->
 
 ```bash 
 scp -pr some/local/path/file hostname:/some/remote/path
@@ -1526,7 +1526,7 @@ scp -pr some/local/path/file hostname:/some/remote/path
 
 ## How do you see all ip rules in iptables?
 
-<!-- notecardId: 1759148483393 -->
+<!-- notecardId: 1761546057622 -->
 
 ```console
 cip@DESKTOP-KJIIPF2:~$ sudo iptables -L
@@ -1542,7 +1542,7 @@ target     prot opt source               destination
 
 ## Add an incomming rule that permits SSH connections solely from 172.16.238.187 in iptables.
 
-<!-- notecardId: 1759148483396 -->
+<!-- notecardId: 1761546057625 -->
 
 ```bash
 iptables -A INPUT -p tcp -s 172.16.238.187 --dport 22 -j ACCEPT
@@ -1550,7 +1550,7 @@ iptables -A INPUT -p tcp -s 172.16.238.187 --dport 22 -j ACCEPT
 
 ## Add a rule that drops all incomming connections with iptables.
 
-<!-- notecardId: 1759148483398 -->
+<!-- notecardId: 1761546057627 -->
 
 ```bash
 iptables -A INPUT -j DROP
@@ -1558,7 +1558,7 @@ iptables -A INPUT -j DROP
 
 ## Add an outgoing rule that permits SSH connections to google.com in iptables at the top of the output chain.
 
-<!-- notecardId: 1759148483400 -->
+<!-- notecardId: 1761546057629 -->
 
 ```bash
 iptables -I OUTPUT 1 -p tcp -d google.com --dport 22 -j ACCEPT
@@ -1566,7 +1566,7 @@ iptables -I OUTPUT 1 -p tcp -d google.com --dport 22 -j ACCEPT
 
 ## What command can you use to schedule a job to run at a certain time?
 
-<!-- notecardId: 1759148483402 -->
+<!-- notecardId: 1761546057631 -->
 
 ```bash
 crontab -e
@@ -1574,7 +1574,7 @@ crontab -e
 
 ## Schedule a job to run at 08:10 AM 19 FEB any weekday.
 
-<!-- notecardId: 1759148483406 -->
+<!-- notecardId: 1761546057633 -->
 
 ```console
 10 8 19 2 * job.sh
@@ -1582,7 +1582,7 @@ crontab -e
 
 ## Schedule a job to run every minute.
 
-<!-- notecardId: 1759148483408 -->
+<!-- notecardId: 1761546057635 -->
 
 ```console
 * * * * *
@@ -1590,7 +1590,7 @@ crontab -e
 
 ## Schedule a job to run every other day (one on one off).
 
-<!-- notecardId: 1759148483410 -->
+<!-- notecardId: 1761546057637 -->
 
 ```console
 * * */2 * *
@@ -1598,7 +1598,7 @@ crontab -e
 
 ## How do you list all jobs scheduled in cron?
 
-<!-- notecardId: 1759148483412 -->
+<!-- notecardId: 1761546057639 -->
 
 ```bash
 cron -l
@@ -1606,7 +1606,7 @@ cron -l
 
 ## Define a basic service unit file named project-mercury.service the unit file only needs to execute the script /usr/bin/project-mercury.sh in the background using /bin/bash.
 
-<!-- notecardId: 1759153885053 -->
+<!-- notecardId: 1761546057641 -->
 
 create file in /etc/systemd/system containing :
 ```console
@@ -1616,7 +1616,7 @@ ExecStart=/bin/bash /usr/bin/project-mercury.sh
 
 ## How do you start a service with systemd?
 
-<!-- notecardId: 1759153885056 -->
+<!-- notecardId: 1761546057643 -->
 
 ```bash
 sudo systemctl start project-mercury.service
@@ -1624,7 +1624,7 @@ sudo systemctl start project-mercury.service
 
 ## How do you check a service is active with systemd?
 
-<!-- notecardId: 1759153885058 -->
+<!-- notecardId: 1761546057645 -->
 
 ```bash 
 sudo systemctl status project-mercury.service
@@ -1632,7 +1632,7 @@ sudo systemctl status project-mercury.service
 
 ## How do you stop a service with systemd?
 
-<!-- notecardId: 1759153885061 -->
+<!-- notecardId: 1761546057647 -->
 
 ```bash
 sudo systemctl stop project-mercury.service
@@ -1640,7 +1640,7 @@ sudo systemctl stop project-mercury.service
 
 ## How do you automate the start of a service during boot with systemd?
 
-<!-- notecardId: 1759153885063 -->
+<!-- notecardId: 1761546057649 -->
 
 add this section to your .service file in /etc/systemd/system
 ```console
@@ -1650,7 +1650,7 @@ WantedBy=graphical.target
 
 ## How do you ensure the service starts under a particular user with systemd?
 
-<!-- notecardId: 1759153885065 -->
+<!-- notecardId: 1761546057651 -->
 
 the .service file should contain the following user setting :
 ```console
@@ -1661,7 +1661,7 @@ User=project_mercury
 
 ## How do you configure the service to restart automatically if it fails with systemd?
 
-<!-- notecardId: 1759153885067 -->
+<!-- notecardId: 1761546057653 -->
 
 the .service file should contain the following restart settings:
 ```console
@@ -1673,7 +1673,7 @@ RestartSec=10
 
 ## How do you define a dependency on another service with systemd?
 
-<!-- notecardId: 1759153885070 -->
+<!-- notecardId: 1761546057655 -->
 
 the .service file should contain the following section before the Service section:
 ```console
@@ -1683,7 +1683,7 @@ After=postgresql.service
 
 ## How do you ensure all changes to a .service file are applied in systemd?
 
-<!-- notecardId: 1759153885072 -->
+<!-- notecardId: 1761546057657 -->
 
 ```bash 
 sudo systemctl daemon-reload
@@ -1691,7 +1691,7 @@ sudo systemctl daemon-reload
 
 ## How do you stop and start a service in one command with systemctl?
 
-<!-- notecardId: 1759153885074 -->
+<!-- notecardId: 1761546057659 -->
 
 ```bash
 systemctl restart docker
@@ -1699,7 +1699,7 @@ systemctl restart docker
 
 ## How do you read the config files for a service while it's still running without restarting with systemctl?
 
-<!-- notecardId: 1759153885077 -->
+<!-- notecardId: 1761546057661 -->
 
 ```bash
 systemctl reload docker
@@ -1707,7 +1707,7 @@ systemctl reload docker
 
 ## What command can you use to ensure a service starts at boot every time with systemctl?
 
-<!-- notecardId: 1759153885079 -->
+<!-- notecardId: 1761546057663 -->
 
 ```bash
 systemctl enable docker
@@ -1715,7 +1715,7 @@ systemctl enable docker
 
 ## What command can you use to ensure a service doesn't start at boot every time with systemctl?
 
-<!-- notecardId: 1759153885081 -->
+<!-- notecardId: 1761546057665 -->
 
 ```bash
 systemctl disable docker
@@ -1723,13 +1723,13 @@ systemctl disable docker
 
 ## What are the three main states of a service in systemd?
 
-<!-- notecardId: 1759153885083 -->
+<!-- notecardId: 1761546057667 -->
 
 Active Innactive Failed
 
 ## How do you trigger the edit of service config file with systemctl?
 
-<!-- notecardId: 1759153885086 -->
+<!-- notecardId: 1761546057669 -->
 
 ```bash
 systemctl edit project-mercury.service --full
@@ -1738,7 +1738,7 @@ systemctl edit project-mercury.service --full
 
 ## How do you list all units currently managed by systemctl?
 
-<!-- notecardId: 1759153885088 -->
+<!-- notecardId: 1761546057671 -->
 
 ```bash
 systemctl list-units --all
@@ -1746,7 +1746,7 @@ systemctl list-units --all
 
 ## How do you see the log of systemctl?
 
-<!-- notecardId: 1759153885091 -->
+<!-- notecardId: 1761546057673 -->
 
 ```bash
 journalctl
@@ -1756,19 +1756,19 @@ journalctl
 
 ## When listing files in /dev/, what does the first letter b of the output stand for?
 
-<!-- notecardId: 1759749242289 -->
+<!-- notecardId: 1761546057675 -->
 
 block device
 
 ## What can be created from a disk?
 
-<!-- notecardId: 1759749242292 -->
+<!-- notecardId: 1761546057677 -->
 
 partitions
 
 ## What built in tool can be used to CRUD partitions?
 
-<!-- notecardId: 1759749242295 -->
+<!-- notecardId: 1761546057679 -->
 
 ```console
 cip@DESKTOP-KJIIPF2:~$ sudo fdisk -l /dev/sdc
@@ -1781,7 +1781,7 @@ I/O size (minimum/optimal): 4096 bytes / 4096 bytes
 
 ## What are the partition types?
 
-<!-- notecardId: 1759749242298 -->
+<!-- notecardId: 1761546057681 -->
 
 primary
     can be used to boot (used to be max 4)
@@ -1792,7 +1792,7 @@ logical
 
 ## What are the partition schemes?
 
-<!-- notecardId: 1759749242301 -->
+<!-- notecardId: 1761546057683 -->
 
 MBR (master boot recort)
     max 4 primary partitions per disk (max size 2TB)
@@ -1801,7 +1801,7 @@ GPT (GUID partition table)
 
 ## What easy to use tool can be used to CRUD partitions?
 
-<!-- notecardId: 1759749242303 -->
+<!-- notecardId: 1761546057685 -->
 
 ```bash
 gdisk
@@ -1809,20 +1809,20 @@ gdisk
 
 ## What needs to be in place on a disk so that rhel can write data to it?
 
-<!-- notecardId: 1759749242306 -->
+<!-- notecardId: 1761546057687 -->
 
 partition
 filesystem
 
 ## What is the main difference between ext2 and ext3 filesystems?
 
-<!-- notecardId: 1759749242309 -->
+<!-- notecardId: 1761546057689 -->
 
 ext2 takes a lot longer to recover after a failure
 
 ## Create and mount a new ext4 filesystem on sdb1.
 
-<!-- notecardId: 1759749242312 -->
+<!-- notecardId: 1761546057691 -->
 
 ```bash
 mkfs.ext4 /dev/sdb1
@@ -1832,7 +1832,7 @@ mount /dev/sdb1 mnt/ext4
 
 ## How can you tell what filesystem is mounted on sdb1?
 
-<!-- notecardId: 1759749242315 -->
+<!-- notecardId: 1761546057693 -->
 
 ```bash
 mount | grep /dev/sdb1
@@ -1841,7 +1841,7 @@ df -hP | grep /dev/sdb1
 
 ## How do you ensure a new filesystem is still mounted after a reboot?
 
-<!-- notecardId: 1759749242317 -->
+<!-- notecardId: 1761546057695 -->
 
 add to /etc/fstab :
 ```console
@@ -1852,7 +1852,7 @@ explanation :
 
 ## How do you find out if a filesystem is created but not mounted on a disk?
 
-<!-- notecardId: 1759749242323 -->
+<!-- notecardId: 1761546057697 -->
 
 ```bash
 blkid /dev/vdc
@@ -1860,39 +1860,39 @@ blkid /dev/vdc
 
 ## What does DAS stand for?
 
-<!-- notecardId: 1759826641085 -->
+<!-- notecardId: 1761546057699 -->
 
 directly attached storage
 
 ## What does NAS stand for?
 
-<!-- notecardId: 1759826641089 -->
+<!-- notecardId: 1761546057701 -->
 
 network attached storage
 
 ## What does SAN stand for?
 
-<!-- notecardId: 1759826641093 -->
+<!-- notecardId: 1761546057703 -->
 
 storage area network
 
 ## What are the main caracteristics of DAS?
 
-<!-- notecardId: 1759826641097 -->
+<!-- notecardId: 1761546057705 -->
  
 block based storage
 dedicated to a single host, 
 
 ## What are the main caracteristics of NAS?
 
-<!-- notecardId: 1759826641100 -->
+<!-- notecardId: 1761546057707 -->
 
 file based storage
 ethernet based,
 
 ## What are the main characteristics of SAN?
 
-<!-- notecardId: 1759826641104 -->
+<!-- notecardId: 1761546057709 -->
 
 block based storage,
 can use fiber channel protocol
@@ -1900,7 +1900,7 @@ high availability,
 
 ## What needs to be set up on the NFS server to secure access to files?
 
-<!-- notecardId: 1759826641107 -->
+<!-- notecardId: 1761546057710 -->
 
 a config in /etc/exports similar to this:
 ```cmd
@@ -1919,7 +1919,7 @@ exportfs -o 10.61.35.201:/software/repos
 
 ## What needs to be set up on the client to access NFS files?
 
-<!-- notecardId: 1759826641111 -->
+<!-- notecardId: 1761546057712 -->
 
 ```bash
 mount 10.61.112.101:/software/repos /mnt/software/repos
@@ -1927,14 +1927,14 @@ mount 10.61.112.101:/software/repos /mnt/software/repos
 
 ## What does LVM stand for and what does it do?
 
-<!-- notecardId: 1759826641115 -->
+<!-- notecardId: 1761546057715 -->
 
 logical volume manager
 allow for grouping of multiple physical volumes into a single volume group that can then be broken up into logical volumes
 
 ## How do you create a physical volume?
 
-<!-- notecardId: 1759826641118 -->
+<!-- notecardId: 1761546057717 -->
 
 ```bash
 pvcreate /dev/sdb
@@ -1942,7 +1942,7 @@ pvcreate /dev/sdb
 
 ## How do you create a volume group?
 
-<!-- notecardId: 1759826641122 -->
+<!-- notecardId: 1761546057719 -->
 
 ```bash
 vgcreate caleston_vg /dev/sdb
@@ -1950,7 +1950,7 @@ vgcreate caleston_vg /dev/sdb
 
 ## How do you list physical volume details?
 
-<!-- notecardId: 1759826641126 -->
+<!-- notecardId: 1761546057720 -->
 
 ```bash
 pvdisplay
@@ -1958,7 +1958,7 @@ pvdisplay
 
 ## How do you display information about the volume group?
 
-<!-- notecardId: 1759826641129 -->
+<!-- notecardId: 1761546057722 -->
 
 ```bash
 vgdisplay
@@ -1972,7 +1972,7 @@ lvcreate -L 1G -n vol1 caleston_vg
 
 ## How do you list all logical volumes
 
-<!-- notecardId: 1759826641136 -->
+<!-- notecardId: 1761546057727 -->
 
 ```bash
 lvs
@@ -1980,7 +1980,7 @@ lvs
 
 ## How do you resize the logical volume group and filesystem?
 
-<!-- notecardId: 1759826641140 -->
+<!-- notecardId: 1761546057729 -->
 
 check space available 
 ```bash
@@ -2007,7 +2007,7 @@ df -hP /mnt/vol1
 
 ## What is the fix for vi when arrow keys in insert mode do not work correctly (insert uppercase letter instead of changing direction)?
 
-<!-- notecardId: 1759826641148 -->
+<!-- notecardId: 1761546057732 -->
 
 ```console
 :set nocompatible
@@ -2015,7 +2015,7 @@ df -hP /mnt/vol1
 
 ## How do you find out what port is used by a service?
 
-<!-- notecardId: 1759826641151 -->
+<!-- notecardId: 1761546057735 -->
 
 ```bash
 sudo netstat -natulp | grep postgres | grep LISTEN
@@ -2023,7 +2023,7 @@ sudo netstat -natulp | grep postgres | grep LISTEN
 
 ## What is the fix for vi when backspace in insert mode doesn't work correctly (not deleting characters)?
 
-<!-- notecardId: 1759826641155 -->
+<!-- notecardId: 1761546057737 -->
 
 ```console
 :set backspace=2
@@ -2031,7 +2031,7 @@ sudo netstat -natulp | grep postgres | grep LISTEN
 
 ## How do you save your vi settings so that they apply to all files?
 
-<!-- notecardId: 1759826641159 -->
+<!-- notecardId: 1761546057739 -->
 
 in your home folder
 ```bash
@@ -2042,3 +2042,23 @@ add
 set nocompatible
 set backspace=2
 ```
+
+## What command can you use to create a namespace?
+
+<!-- notecardId: 1761546057740 -->
+
+```bash
+unshare
+```
+
+## What are the types of namespaces?
+
+<!-- notecardId: 1761546057742 -->
+
+mount
+process id (pid)
+interprocess communication (ipc)
+unix time sharing system (uts)
+user
+network
+control group
